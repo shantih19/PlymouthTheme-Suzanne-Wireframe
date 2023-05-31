@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=SuzanneWireframe
+Description=This is a Plymouth theme with a wireframe Blender Suzanne spinning.
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/SuzanneWireframe
+ScriptFile=/usr/share/plymouth/themes/SuzanneWireframe/SuzanneWireframe.script
