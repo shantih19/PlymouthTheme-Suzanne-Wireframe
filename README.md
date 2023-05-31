@@ -1,18 +1,16 @@
-# PlymouthTheme-Cat
-This is a Plymouth theme.
+# SuzanneWireframe
+This is a Plymouth theme, based on [krishnan793's theme](https://github.com/krishnan793/PlymouthTheme-Cat.git)
 
-[![Video](https://4.bp.blogspot.com/-gG0MBGjEE9M/WBYXrOGrVGI/AAAAAAAABVE/auGpLRYf7jor4hu3jurYGcjaVBapHyAVACLcB/s320/8998adc40112985a8f29cf414925d390.gif)](https://www.youtube.com/watch?v=c6f478VBhtE)
-
-
-[Video] https://www.youtube.com/watch?v=c6f478VBhtE
-
-[Blog] https://www.eionix.co.in/2016/10/30/plymouth-theme-for-ubuntu.html
+[![Video](https://github.com/shantih19/PlymouthTheme-Suzanne-Wireframe/blob/master/preview.gif?raw=true)](https://www.youtube.com/watch?v=zqsrT9cxJhs)
 
 # Installation
 
 Clone this repository.
 
-    sudo git clone https://github.com/krishnan793/PlymouthTheme-Cat.git /usr/share/plymouth/themes/PlymouthTheme-Cat
+    sudo git clone https://github.com/shantih19/PlymouthTheme-Suzanne-Wireframe.git
+
+Run the install script (as root). It will also rebuild initramfs.
+    # ./install.sh
 
 After installing you can test the theme through (as root, preferably on a tty):
 
@@ -22,9 +20,9 @@ After installing you can test the theme through (as root, preferably on a tty):
 
 ## On most distros
 
-(Tested on openSUSE Tumbleweed)
+(Tested on Arch)
 
-### Set GRUB2 up
+### Set GRUB up
 
 Check `/etc/default/grub`. It should include the following:
 
@@ -34,27 +32,15 @@ Check `/etc/default/grub`. It should include the following:
 * `quiet` and `splash` are required to start plymouth
 * Additionally you might have to [enable KMS](https://unix.stackexchange.com/a/110589) e.g. in case you're using integrated graphics by Intel by adding `i915.modeset=1`.
 
-Reconfigure GRUB2, if you had to add something:
+Reconfigure GRUB, if you had to add something:
 
-    sudo grub2-mkconfig -o /boot/grub2/grub.cfg
-
-### Activate the theme
-
-Check that the theme ended up in the right place:
-
-    sudo plymouth-set-default-theme --list
-
-Set the theme as default:
-
-    sudo plymouth-set-default-theme PlymouthTheme-Cat -R
-
-The -R option rebuilds the initrd automatically which is necessary.
+    sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 ## On Ubuntu
 
 Install the theme.
 
-    sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/PlymouthTheme-Cat/PlymouthTheme-Cat.plymouth 100
+    sudo update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/SuzanneWireframe/SuzanneWireframe.plymouth 100
 
 Select the default theme.
 
@@ -66,4 +52,4 @@ Update the initramfs image.
 
 Now reboot.
 
-If you want to install this on < Ubuntu 16.04, change the path from /usr/share/plymouth to /lib/plymouth/ . You need to do this on the PlymouthTheme-Cat.plymouth file also.
+If you want to install this on < Ubuntu 16.04, change the path from /usr/share/plymouth to /lib/plymouth/ . You need to do this on the SuzanneWireframe.plymouth file also.
